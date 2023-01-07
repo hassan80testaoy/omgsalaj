@@ -1,4 +1,3 @@
-    <script>
     //<![CDATA[
 var olderLink = $('a.blog-pager-older-link')['attr']('href');
 olderLink && $('.loadMorePosts')['show'](), $('.loadMorePosts a')['on']('click', function(_0xe79bx3) {
@@ -18,4 +17,3 @@ olderLink && $('.loadMorePosts')['show'](), $('.loadMorePosts a')['on']('click',
 });
  
 //]]>
-</script>
