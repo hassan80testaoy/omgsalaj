@@ -33,6 +33,24 @@ if (document.querySelector("#a3lan-lates")) {
 document.querySelector(".a3lan-lates").innerHTML = document.querySelector("#a3lan-lates").innerHTML;
 document.querySelector("#a3lan-lates").remove();
 };
+    $(function(){
+        $("img").lazyload({
+            placeholder : "https://4.bp.blogspot.com/-oA8G9t61JXk/VtLrtkAzObI/AAAAAAAAFTY/EjT6jl2NpN8/s1600/loading.gif",
+            threshold : 100,
+            failure_limit : 10
+        });
+    });
+var lazyadsense=!1;
+window.addEventListener("scroll",function(){
+(0!=document.documentElement.scrollTop&&!1===lazyadsense||0!=document.body.scrollTop&&!1===lazyadsense)&&(!function(){
+  var e=document.createElement("script");
+  e.type="text/javascript",
+  e.async=!0,
+  e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+  var a=document.getElementsByTagName("script")[0];
+  a.parentNode.insertBefore(e,a)
+  }(),lazyadsense=!0)
+},!0);
 }
 if (!not data:view.isSingleItem) {
 var olderLink=$("a.blog-pager-older-link").attr("href");olderLink&&$(".loadMorePosts").show(),$(".loadMorePosts a").on("click",(function(o){$(".loadMorePosts").hide(),$.ajax({url:olderLink,success:function(o){var e=$(o).find(".blog-posts");e.children(".status-msg-wrap").remove(),$(".blog-posts").append(e.html()),(olderLink=$(o).find(".blog-pager-older-link").attr("href"))?$(".loadMorePosts").show():$(".noMorePosts").show()},beforeSend:function(){$(".loadMore > #loader").show()},complete:function(){$(".loadMore > #loader").hide()}}),o.preventDefault()}));
