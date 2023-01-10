@@ -1,3 +1,4 @@
+<b:if cond='data:view.isPost'>
          //<![CDATA[
 $(document).ready(function(){$(tocList).empty();var t=null,a=null,e=0;$(".amp-content h2, .amp-content h3").each(function(){var n="<a name='"+e+"'></a>";$(this).before(n);var o="<li><a href='#"+e+"'>"+$(this).text()+"</a></li>";$(this).is("h2 , h3")?(a=$("<ul></ul>"),(t=$(o)).append(a),t.appendTo("#tocList")):a.append(o),e++})});
 if (document['getElementById']('a3lan-title')) {
