@@ -53,4 +53,9 @@ $(".optionsBtn").click(function() {
     $(this).toggleClass("rotated");
     $(".search-btn, .arabes1, .to-top, .home-btn").toggle();
 });
+$(document).ready(function () {
+  $(".faq-question").click(function () {
+    $(this).next(".faq-answer").slideToggle();
+  });
+});
 var cookieChoices = {};
